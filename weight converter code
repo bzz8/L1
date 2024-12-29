@@ -1,0 +1,20 @@
+using System;
+
+namespace GitBruh
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to the weight converter!");
+            Console.WriteLine("\nEnter weight in kilograms:");
+            double inKilo = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine($"The conversion for {inKilo} kilograms is {Math.Round(CalculateWeight(inKilo),2)} pounds.");
+
+            Console.ReadKey();
+        }
+
+        public static double CalculateWeight(double a) => 2.20462 * a;
+    }
+}
